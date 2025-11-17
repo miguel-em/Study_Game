@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx41xpr1owdub"]
+
+[ext_resource type="Texture2D" uid="uid://bll3ivja647sk" path="res://images/PopUpSprite-0008.png" id="1_3hkpd"]
+[ext_resource type="FontFile" uid="uid://c5hovisdkkr42" path="res://TTF/dogica.ttf" id="2_ka42h"]
+
+[node name="Window" type="Window"]
+title = "Info"
+position = Vector2i(710, 105)
+size = Vector2i(500, 500)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+texture = ExtResource("1_3hkpd")
+
+[node name="Label" type="Label" parent="Camera2D/Sprite2D"]
+offset_left = -233.0
+offset_top = -226.0
+offset_right = 337.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("2_ka42h")
+theme_override_font_sizes/font_size = 25
+text = "In this mini game
+
+you will answer 
+
+questions within 
+
+the timer to
+
+obtain tree
+
+sapplings in 
+
+order to replace
+
+the cut down 
+
+part of the 
+
+forest."

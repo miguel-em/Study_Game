@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn8ymtrlhw5di"]
+
+[ext_resource type="Texture2D" uid="uid://c4pmdww0x2drm" path="res://images/SapplingSprite-0004.png" id="1_g4bs2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfj74"]
+size = Vector2(20, 52)
+
+[node name="SapplingNode" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(4, -23)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_g4bs2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+z_index = 11
+position = Vector2(-4, 15)
+shape = SubResource("RectangleShape2D_bfj74")

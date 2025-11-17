@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1q1yru54g0np"]
+
+[ext_resource type="Texture2D" uid="uid://bll3ivja647sk" path="res://images/PopUpSprite-0008.png" id="1_1ckdl"]
+[ext_resource type="FontFile" uid="uid://c5hovisdkkr42" path="res://TTF/dogica.ttf" id="2_eo1wu"]
+
+[node name="Window" type="Window"]
+size = Vector2i(500, 500)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+texture = ExtResource("1_1ckdl")
+
+[node name="Label" type="Label" parent="Camera2D/Sprite2D"]
+offset_left = -198.0
+offset_top = -212.0
+offset_right = 253.0
+offset_bottom = 233.0
+theme_override_fonts/font = ExtResource("2_eo1wu")
+theme_override_font_sizes/font_size = 24
+text = "In this game was made by
+
+Miguel Estrada Martinez.
+
+This about global warming
+
+and the consequences 
+
+associated by it.
+
+"
+autowrap_mode = 2

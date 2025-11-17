@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://badaxwjrndevj"]
+
+[ext_resource type="Script" uid="uid://cdummvg1kxeul" path="res://Scripts/dirt_path.gd" id="1_kxuhh"]
+[ext_resource type="Texture2D" uid="uid://omx5nfnanib0" path="res://images/DiggedDirtSprite-0003.png" id="1_lojfs"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_kxuhh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lojfs")

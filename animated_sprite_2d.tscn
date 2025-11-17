@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://csgebatf2ddp3"]
+
+[ext_resource type="Texture2D" uid="uid://ypcovgc3qq85" path="res://images/DirtWaterSprite11-0001-Sheet.png" id="1_wes3n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yak7y"]
+atlas = ExtResource("1_wes3n")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiod3"]
+atlas = ExtResource("1_wes3n")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w14s3"]
+atlas = ExtResource("1_wes3n")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0m0qi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yak7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiod3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w14s3")
+}],
+"loop": true,
+"name": &"WaterFlow",
+"speed": 3.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_0m0qi")
+animation = &"WaterFlow"
+autoplay = "WaterFlow"
+frame_progress = 0.305739

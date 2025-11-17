@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dum6jc0gls2hv"]
+
+[ext_resource type="Texture2D" uid="uid://bll3ivja647sk" path="res://images/PopUpSprite-0008.png" id="1_ppyaq"]
+[ext_resource type="FontFile" uid="uid://c5hovisdkkr42" path="res://TTF/dogica.ttf" id="2_w63dv"]
+
+[node name="Window" type="Window"]
+size = Vector2i(500, 500)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+texture = ExtResource("1_ppyaq")
+
+[node name="Label" type="Label" parent="Camera2D/Sprite2D"]
+offset_left = -204.0
+offset_top = -232.0
+offset_right = 294.0
+offset_bottom = 265.0
+theme_override_fonts/font = ExtResource("2_w63dv")
+theme_override_font_sizes/font_size = 25
+text = "In this mini game you will be rewuired to dig a path
+for the water to flow to the dry patches in the area. 
+There will be obstacles that will prevent you from
+digging in certain places. "
+autowrap_mode = 2

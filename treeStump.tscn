@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dathh6kbva6vn"]
+
+[ext_resource type="Texture2D" uid="uid://b65krvwp57xya" path="res://images/SStumpprite-0002.png" id="1_nv70g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svjtr"]
+size = Vector2(33.913, 41.227)
+
+[node name="tree_Stump" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(24, 40)
+scale = Vector2(1.53333, 1.35833)
+shape = SubResource("RectangleShape2D_svjtr")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(26, 33)
+scale = Vector2(0.0673259, 0.0750102)
+texture = ExtResource("1_nv70g")
