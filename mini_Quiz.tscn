@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsnt1ubbvuvkv"]
+
+[ext_resource type="PackedScene" uid="uid://coh2m4vtnwc2u" path="res://scene/question_control.tscn" id="1_g2dms"]
+
+[node name="Window" type="Window"]
+size = Vector2i(1060, 705)
+
+[node name="QuestionControl" parent="." instance=ExtResource("1_g2dms")]
+scale = Vector2(1.85539, 1.58287)

@@ -1,0 +1,156 @@
+[gd_scene load_steps=12 format=3 uid="uid://f2a7b4mplj7"]
+
+[ext_resource type="Script" uid="uid://b7hu2bpyo61wc" path="res://Scripts/main_menu.gd" id="1_2fwvj"]
+[ext_resource type="Texture2D" uid="uid://bnxw14wn3afk3" path="res://images/HomeScreenSprite-0007.png" id="2_0iwki"]
+[ext_resource type="FontFile" uid="uid://c5hovisdkkr42" path="res://TTF/dogica.ttf" id="3_sepwh"]
+[ext_resource type="PackedScene" uid="uid://c1q1yru54g0np" path="res://Assets/aboutPopUp.tscn" id="4_0iwki"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
+texture = ExtResource("2_0iwki")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0.817521, 0.817521, 0.817521, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.815686, 0.815686, 0.815686, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fu7sn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -3.0
+offset_right = -15.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2fwvj")
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.920995, 0.920995, 0.920994, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = 5.0
+offset_right = 19.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jix8l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = 46.0
+offset_right = 188.0
+offset_bottom = 259.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_colors/font_hover_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_colors/font_color = Color(0.196078, 0.662745, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.196078, 0.662745, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "Start Game"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_colors/font_hover_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_colors/font_color = Color(0.196078, 0.662745, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.196078, 0.662745, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fu7sn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "About"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_colors/font_hover_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_colors/font_color = Color(0.196078, 0.662745, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.196078, 0.662745, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.196078, 0.662745, 0.478431, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 310.0
+offset_right = 1218.0
+offset_bottom = 489.0
+theme_override_colors/font_color = Color(0.513678, 1, 0.48175, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("3_sepwh")
+theme_override_font_sizes/font_size = 63
+text = "Eco-Quest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Window" parent="." instance=ExtResource("4_0iwki")]
+position = Vector2i(600, 350)
+visible = false
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Startbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_Aboutbutton_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Exitbutton_2_pressed"]
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]

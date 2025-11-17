@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=3 uid="uid://coh2m4vtnwc2u"]
+
+[ext_resource type="Texture2D" uid="uid://bll3ivja647sk" path="res://images/PopUpSprite-0008.png" id="1_ctqeh"]
+[ext_resource type="Script" uid="uid://dwxjopifkm3tn" path="res://Scripts/question_control.gd" id="1_j70ek"]
+[ext_resource type="FontFile" uid="uid://c5hovisdkkr42" path="res://TTF/dogica.ttf" id="2_j70ek"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bc8gy"]
+texture = ExtResource("1_ctqeh")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctqeh"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j70ek"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bc8gy"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41y8p"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="QuestionControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_right = -740.0
+offset_bottom = -333.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j70ek")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1060.0
+offset_bottom = 705.0
+scale = Vector2(0.539427, 0.673287)
+theme_override_styles/panel = SubResource("StyleBoxTexture_bc8gy")
+
+[node name="Timer" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 430.0
+offset_top = 53.0
+offset_right = 580.0
+offset_bottom = 88.0
+scale = Vector2(0.539427, 0.673287)
+theme_override_fonts/font = ExtResource("2_j70ek")
+theme_override_font_sizes/font_size = 25
+text = "Timer:"
+
+[node name="Question" type="Label" parent="."]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 93.0
+offset_right = 467.0
+offset_bottom = 116.0
+scale = Vector2(0.539427, 0.673287)
+theme_override_fonts/font = ExtResource("2_j70ek")
+theme_override_font_sizes/font_size = 25
+text = "Question:"
+
+[node name="QText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 123.0
+offset_right = 895.0
+offset_bottom = 278.0
+scale = Vector2(0.539427, 0.673287)
+theme_override_fonts/font = ExtResource("2_j70ek")
+theme_override_font_sizes/font_size = 25
+autowrap_mode = 3
+
+[node name="Answer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 51.0
+offset_right = 221.0
+offset_bottom = 89.0
+scale = Vector2(0.539427, 0.673287)
+theme_override_fonts/font = ExtResource("2_j70ek")
+theme_override_font_sizes/font_size = 25
+text = "Answer:"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 262.0
+offset_right = 756.0
+offset_bottom = 522.0
+scale = Vector2(0.539427, 0.673287)
+theme_override_constants/separation = 36
+
+[node name="AnswerA" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctqeh")
+text = "A. "
+autowrap_mode = 2
+
+[node name="AnswerB" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_j70ek")
+text = "B."
+autowrap_mode = 2
+
+[node name="AnswerC" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_bc8gy")
+text = "C."
+autowrap_mode = 2
+
+[node name="AnswerD" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_41y8p")
+text = "D."
+autowrap_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/AnswerA" to="." method="_on_answer_a_pressed"]
+[connection signal="pressed" from="VBoxContainer/AnswerB" to="." method="_on_answer_b_pressed"]
+[connection signal="pressed" from="VBoxContainer/AnswerC" to="." method="_on_answer_c_pressed"]
+[connection signal="pressed" from="VBoxContainer/AnswerD" to="." method="_on_answer_d_pressed"]
